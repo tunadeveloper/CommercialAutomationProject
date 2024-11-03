@@ -16,5 +16,14 @@ namespace CommercialAutomationProject
         {
             InitializeComponent();
         }
-    }
+        Products productsForm;
+		private void products_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+            if(productsForm == null) {
+            productsForm = new Products();
+            productsForm.MdiParent = this;
+            productsForm.Show();
+		}
+		}
+	}
 }
